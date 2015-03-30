@@ -5,20 +5,20 @@
 #
 # *NOTE*: Using the 2.0 *auth api* does not mean that compute api is 2.0.  We
 # will use the 1.1 *compute api*
-export OS_AUTH_URL=http://iaas-api.starwave.com:5000/v2.0/tokens
+#export OS_AUTH_URL=http://iaas-api.starwave.com:5000/v2.0/tokens
 
 # With the addition of Keystone we have standardized on the term **tenant**
 # as the entity that owns the resources.
-export OS_TENANT_ID=e90ecadaeb534196ab35b1d095576b15
-export OS_TENANT_NAME="DIP/DD"
+#export OS_TENANT_ID=e90ecadaeb534196ab35b1d095576b15
+#export OS_TENANT_NAME="DIP/DD"
 
 # In addition to the owning entity (tenant), openstack stores the entity
 # performing the action as the **user**.
-export OS_USERNAME=shars106
+#export OS_USERNAME=shars106
 
 # With Keystone you pass the keystone password.
-if [ ${+OS_PASSWORD} -eq 0 ]; then
-    echo "Please enter your OpenStack Password: "
-    read -t 10 -s OS_PASSWORD_INPUT
-    export OS_PASSWORD=$OS_PASSWORD_INPUT
-fi
+#if [ ${+OS_PASSWORD} -eq 0 ]; then
+#    echo "Please enter your OpenStack Password: "
+#    read -t 10 -s OS_PASSWORD_INPUT
+#    export OS_PASSWORD=$OS_PASSWORD_INPUT
+#fi
