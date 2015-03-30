@@ -4,7 +4,8 @@
 # functions, options, key bindings, etc.
 #
 
-autoload -U compinit
+zstyle :compinstall filename '/home/sksharp/.zshrc'
+autoload -Uz compinit
 compinit
 
 #allow tab completion in the middle of a word
