@@ -1,5 +1,5 @@
-alias ll='ls -laFG'
-alias la='ls -aCFG'
+alias ll='ls -laFGv'
+alias la='ls -aCFGv'
 alias ls='ls -CFG'
 
 alias -- '+'='pushd'
@@ -23,9 +23,9 @@ alias which-command=whence
 alias xterm='xterm -fn 9x15 -geometry 128x40'
 
 function f+g () {
-    find $1 -type f -exec grep -l $2 {} \;
+    find ${@:1: -1} -type f -exec egrep -l ${@: -1} {} \;
 }
 
 function f+ig () {
-    find $1 -type f -exec grep -il $2 {} \;
+    find ${@:1: -1} -type f -exec egrep -il ${@: -1} {} \;
 }
