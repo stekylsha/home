@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/shars106/src/qa/genie-automation/src/main/resources'
-let g:netrw_dirhist_2='/Users/shars106/bin/env.d'
-let g:netrw_dirhist_3='/Users/shars106/.nx/temp'
-let g:netrw_dirhist_4='/Users/shars106/.nx/temp/33627'
-let g:netrw_dirhist_5='/Users/shars106/src/cookbooks/twdc_tomcat'
-let g:netrw_dirhist_6='/Users/shars106/src/cookbooks/twdc_tomcat/attributes'
-let g:netrw_dirhist_7='/Users/shars106/src/cookbooks/mCGate/attributes'
