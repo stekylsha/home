@@ -3,7 +3,7 @@ set autoindent
 set textwidth=80
 set shiftwidth=4
 set tabstop=4
-set expandtab
+" set expandtab
 set nohlsearch
 set background=light
 set laststatus=2
