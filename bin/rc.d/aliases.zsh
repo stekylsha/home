@@ -15,7 +15,7 @@ alias -- '++'='dirs -pv && echo -n "Which directory? " && read -k d && echo && p
 alias -- '--'='dirs -pv && echo -n "Which directory? " && read -k d && echo && popd +${d} && unset d'
 
 alias h='fc -l 0'
-alias hg='fc -l 0 | grep'
+alias h+g='fc -l 0 | egrep'
 
 alias vi='vim'
 

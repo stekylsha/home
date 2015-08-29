@@ -1,2 +1,11 @@
+# ignore everything :p
 .*
 *
+
+# don't ignore changes to env.d and rc.d
+!bin/env.d/**
+!bin/rc.d/**
+!**/.gitignore
+!.vim
+!.vimrc
+!.zsh{env,rc}
