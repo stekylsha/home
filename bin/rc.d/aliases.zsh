@@ -22,10 +22,34 @@ alias vi='vim'
 alias which-command=whence
 alias xterm='xterm -fn 9x15 -geometry 128x40'
 
+chjdk () {
+    export JDK_HOME=$( /usr/libexec/java_home --version 1.${1} --failfast )
+    export PATH=$( echo $PATH | sed "s#${JAVA_HOME}#${JDK_HOME}#" )
+    export JAVA_HOME=${JDK_HOME}
+}
+
 function f+g () {
     find ${@:1: -1} -type f -exec egrep -l ${@: -1} {} \;
 }
 
 function f+ig () {
     find ${@:1: -1} -type f -exec egrep -il ${@: -1} {} \;
+}
+
+function fj+g () {
+    find ${@:1: -1} -type f -name \*.java -exec egrep -l ${@: -1} {} \;
+
+}
+
+function fj+ig () {
+    find ${@:1: -1} -type f -name \*.java -exec egrep -il ${@: -1} {} \;
+}
+
+function fp+g () {
+    find ${@:1: -2} -type f -name ${@: -2: -1} -exec egrep -l ${@: -1} {} \;
+
+}
+
+function fp+ig () {
+    find ${@:1: -2} -type f -name ${@: -2: -1} -exec egrep -il ${@: -1} {} \;
 }
