@@ -6,7 +6,7 @@
 
 zstyle :compinstall filename '/home/sksharp/.zshrc'
 autoload -Uz compinit
-compinit
+compinit -i
 
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
