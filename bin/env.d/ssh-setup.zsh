@@ -37,7 +37,7 @@ elif ( [[ ${#P_SSH_AGENT_PID} -eq 1 ]] && [[ ${P_SSH_AGENT_PID[1]} -ne ${SSH_AGE
 	P_SSH_AUTH_SOCK=$( /bin/ls -1d /tmp/ssh-*/* )
 	if [[ -z "${P_SSH_AUTH_SOCK}" ]]; then
 		# try lsof
-		P_SSH_AUTH_SOCK=$( lsof -a -U -p ${P_SSH_AGENT_PID[1]} | head -n 2 | tail -n 1 | sed -e 's#^[^/]*##' )
+		P_SSH_AUTH_SOCK=$( lsof -a -U -p ${P_SSH_AGENT_PID[1]} | head -n 2 | tail -n 1 | sed 's#^[^/]*##' )
 	fi
 
 	# Still empty?  Error.
