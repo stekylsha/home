@@ -23,13 +23,13 @@ alias which-command=whence
 alias xterm='xterm -fn 9x15 -geometry 128x40'
 
 chjdk () {
-	if [ -x /usr/libexec/java_home ]; then
-		export JDK_HOME=$( /usr/libexec/java_home --version 1.${1} --failfast )
-	else
+	if [[ ${(P)+$( echo "JDK${1}_HOME" )} -eq 1 && -d ${(P)$( echo "JDK${1}_HOME" )} ]]; then
 		export JDK_HOME=${(P)$( echo "JDK${1}_HOME" )}
+		export PATH=$( echo $PATH | sed "s#${JAVA_HOME}#${JDK_HOME}#" )
+		export JAVA_HOME=${JDK_HOME}
+	else
+		echo "No JDK found for ${1}."
 	fi
-    export PATH=$( echo $PATH | sed "s#${JAVA_HOME}#${JDK_HOME}#" )
-    export JAVA_HOME=${JDK_HOME}
 }
 
 function f+g () {
