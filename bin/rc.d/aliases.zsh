@@ -22,7 +22,7 @@ alias vi='vim'
 alias which-command=whence
 alias xterm='xterm -fn 9x15 -geometry 128x40'
 
-chjdk () {
+function chjdk () {
 	if [[ ${(P)+$( echo "JDK${1}_HOME" )} -eq 1 && -d ${(P)$( echo "JDK${1}_HOME" )} ]]; then
 		export JDK_HOME=${(P)$( echo "JDK${1}_HOME" )}
 		export PATH=$( echo $PATH | sed "s#${JAVA_HOME}#${JDK_HOME}#" )
@@ -30,6 +30,10 @@ chjdk () {
 	else
 		echo "No JDK found for ${1}."
 	fi
+}
+
+function reant() {
+    source ${HOME}/bin/env.d/ant.zsh
 }
 
 function f+g () {
