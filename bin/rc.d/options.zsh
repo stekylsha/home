@@ -1,4 +1,6 @@
-fpath=( ~/.zsh/completion ${fpath} )
+if [[ ! "${fpath}" =~ "${HOME}/.zsh/completion" ]]; then
+    fpath=( ~/.zsh/completion ${fpath} )
+fi
 
 setopt AUTO_CD
 setopt PUSHD_IGNORE_DUPS
