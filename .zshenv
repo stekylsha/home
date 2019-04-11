@@ -1,13 +1,6 @@
 #
 # .zshenv is sourced :)
 #
-for i in $HOME/bin/env.d/*.zsh ; do
-    if [ -r "$i" ]; then
-        if [ "$PROMPT" ]; then
-            . $i
-        else
-            . $i >/dev/null 2>&1
-        fi
-    fi
-done
 
+export HOMEBREW_GITHUB_API_TOKEN=92ec6e43942251a132e14359ed80c2eff53954b5
+export ANT_OPTS="${ANT_OPTS} -Dbuildconfig.dir=${HOME}/src/LegacyBuild -Dalready.bootstrapped=true"

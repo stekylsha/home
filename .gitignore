@@ -5,7 +5,7 @@
 # don't ignore changes to env.d and rc.d
 !bin/env.d/**
 !bin/rc.d/**
-!**/.gitignore
-!.vim
-!.vimrc
-!.zsh{env,rc}
+!/.gitignore
+!/.vim
+!/.vimrc
+!/.z{profile,sh{env,rc}}
