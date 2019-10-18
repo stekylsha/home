@@ -4,7 +4,7 @@ alias gc='git commit'
 alias gd='git diff -b -w'
 alias gl='git log'
 alias gk='gitk --all&'
-alias go='git checkout'
+alias gco='git checkout'
 alias gs='git status'
 alias gx='gitx --all'
 

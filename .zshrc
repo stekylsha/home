@@ -38,8 +38,9 @@ done
 
 # The zstyle/compinit uses things defined in the rc.d scripts, so do it *after*
 # they've been run.
-zstyle ':completion:*' completer _expand _complete _ignored _match _approximate _prefix
-zstyle ':completion:*' max-errors 2 not-numeric
+#zstyle ':completion:*' completer _expand _complete _ignored _match _approximate _prefix
+zstyle ':completion:*' completer _complete _ignored _match _approximate _prefix
+zstyle ':completion:*' max-errors 1 not-numeric
 zstyle :compinstall filename "${HOME}/.zshrc"
 
 autoload -Uz compinit

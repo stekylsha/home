@@ -10,3 +10,5 @@ export CDPATH
 
 EDITOR=/usr/bin/vim
 export EDITOR
+
+export chpwd_functions=( subkube )
