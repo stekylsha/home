@@ -8,6 +8,8 @@ set nohlsearch
 set background=light
 set laststatus=2
 set statusline=%t%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set modeline
+set modelines=4
 syntax on
 filetype plugin indent on
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif

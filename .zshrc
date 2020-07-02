@@ -26,13 +26,13 @@ bindkey -v
 # autoload -U colors
 #colors
 
-for i in $HOME/bin/rc.d/*.zsh ; do
-    if [ -r "$i" ]; then
-        if [ "$PS1" ]; then
-            . $i
-#        else
-#            . $i >/dev/null 2>&1
-        fi
+for i in ${HOME}/bin/rc.d/*.zsh; do
+    if [ -r "${i}" ]; then
+        #typeset -i zrcstart=$( ${HOME}/bin/getepicms ); \
+        #. ${i} >> ${HOME}/.zinit_err 2>&1; \
+        #echo "${i}: $( echo $( ${HOME}/bin/getepicms ) - ${zrcstart} | bc )"; \
+        #unset zrcstart
+        . ${i} >> ${HOME}/.zinit_err 2>&1
     fi
 done
 

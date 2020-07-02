@@ -99,3 +99,11 @@ function rekube() {
         . ${HOME}/bin/env.d/k8s.zsh
     fi
 }
+
+# Time to millisecond.
+function timer {
+    local start=$( getepicms )
+    ${@}
+    echo "$(( ( $( getepicms ) - ${start} ) / 1000 )) ms" > /dev/stderr
+}
+
