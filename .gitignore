@@ -3,9 +3,11 @@
 *
 
 # don't ignore changes to env.d and rc.d
-!bin/env.d/**
-!bin/rc.d/**
+!/bin/env.d/**
+!/bin/rc.d/**
 !/.gitignore
+!/.omz-custom
+!/.omz-custom/**
 !/.vim
 !/.vimrc
 !/.z{profile,sh{env,rc}}
