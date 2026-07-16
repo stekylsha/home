@@ -91,8 +91,12 @@ export VI_MODE_DISABLE_CLIPBOARD=1
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+#
+# p-brew is "pre"-brew and sets up the appdir, hence must precede the brew
+# plugin.
 plugins=(
 	aws
+	p-brew
 	brew
 	docker
 	git

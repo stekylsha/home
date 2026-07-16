@@ -54,7 +54,7 @@ function __setup-snow__() {
 		prod)
 			hn=teradatacs
 			if [[ -z "${CREDS_PROD}" ]]; then
-				get-vce-cred-prod
+				get-vce-creds-prod
 			fi
 			creds="${CREDS_PROD}"
 			;;
@@ -112,7 +112,7 @@ function snow-pooling() {
 		--header "Content-Type: application/json" \
 		--user "$(echo -n ${creds})" \
 		--request GET \
-		--url "https://${hn}.service-now.com/api/teop/metadata_service/checkPoolingSite?csp=${(L)2}&region=${(L)3}" |\
+		--url "https://${hn}.service-now.com/api/teop/metadata_service/checkPoolingSite?csp=${2}&region=${(L)3}" |\
 	jq --sort-keys .
 
 	unset hn creds
